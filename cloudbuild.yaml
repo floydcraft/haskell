@@ -19,6 +19,9 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['image', 'push', 'floydcraft/$_CONTAINER']
 
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'alpha', 'builds', 'triggers', 'run', '--branch=$BRANCH_NAME', 'cardano-node-config' ]
+
 #  - name: 'gcr.io/cloud-builders/git'
 #    entrypoint: 'bash'
 #    args:
