@@ -1,4 +1,4 @@
-FROM debian:buster-20210208 as stage1
+FROM debian:buster as stage1
 LABEL maintainer="chbfiv@floydcraft.com"
 
 ARG _VERSION=8.10.2
